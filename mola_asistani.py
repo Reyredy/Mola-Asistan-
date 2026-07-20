@@ -253,11 +253,22 @@ with sekmeler[3]:
     else:
         st.info(f"Bugün toplam **{su_sayisi} bardak** su içtin. Hedefine ulaşmak için **{hedef_bardak - su_sayisi} bardak** daha içmelisin. Başarılar Eda! 😉")
 
-    if st.button("💧 Bir Bardak Su İçtim", use_container_width=True):
-        veri["su_kayitlari"].append({"tarih": bugun, "saat": datetime.datetime.now().strftime("%H:%M")})
-        veri_kaydet(veri)
-        st.rerun()
-
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("💧 Bir Bardak Su İçtim", use_container_width=True, type="primary"):
+            veri["su_kayitlari"].append({"tarih": bugun, "saat": datetime.datetime.now().strftime("%H:%M")})
+            veri_kaydet(veri)
+            st.rerun()
+    with col2:
+        bugunku_su_sayisi = len([s for s in veri["su_kayitlari"] if s.get("tarih") == bugun])
+        if st.button("↩️ Son Girişi Geri Al", use_container_width=True, disabled=(bugunku_su_sayisi == 0)):
+            # Bugüne ait son su kaydını bul ve sil
+            for i in range(len(veri["su_kayitlari"]) - 1, -1, -1):
+                if veri["su_kayitlari"][i].get("tarih") == bugun:
+                    veri["su_kayitlari"].pop(i)
+                    break
+            veri_kaydet(veri)
+            st.rerun()
 # SEKME 5: VARDİYA & MESAİ TAKİP SİSTEMİ
 import datetime
 import time
