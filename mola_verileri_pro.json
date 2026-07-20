@@ -1,0 +1,59 @@
+{
+  "profil": {
+    "isim": "Eda",
+    "durum": "💬 Canlı Destekte",
+    "emoji": "👩‍💻"
+  },
+  "ruh_hali_kayitlari": [],
+  "hazir_cevaplar": [],
+  "vardiya_notlari": [],
+  "su_kayitlari": [
+    {
+      "tarih": "20-07-2026",
+      "saat": "14:54"
+    },
+    {
+      "tarih": "20-07-2026",
+      "saat": "14:54"
+    },
+    {
+      "tarih": "20-07-2026",
+      "saat": "14:54"
+    },
+    {
+      "tarih": "20-07-2026",
+      "saat": "14:54"
+    },
+    {
+      "tarih": "20-07-2026",
+      "saat": "14:54"
+    }
+  ],
+  "arkadaslar": [
+    {
+      "isim": "sss",
+      "durum": "💬 Canlı Destekte",
+      "emoji": "👩‍💻"
+    }
+  ],
+  "mesajlar": {
+    "Eda_Selin": [],
+    "Eda_Merve": [
+      {
+        "gonderen": "Eda",
+        "metin": "hi",
+        "saat": "14:54"
+      }
+    ]
+  },
+  "regl_kayitlari": [
+    {
+      "tarih": "20-07-2026",
+      "sure": 28,
+      "semptomlar": [
+        "Şiddetli Sancı",
+        "Stresli"
+      ]
+    }
+  ]
+}
